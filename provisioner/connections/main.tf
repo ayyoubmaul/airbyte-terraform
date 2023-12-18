@@ -25,12 +25,3 @@ resource "airbyte_connection" "faker_to_postgres" {
     schedule_type   = "manual"
   }
 }
-
-resource "airbyte_connection" "faker_to_postgres_2" {
-  name = "Faker to Postgres 2"
-  source_id = module.src_faker.src_faker_source_id
-  destination_id = module.dest_postgres.dest_postgres_destination_id_2
-  schedule = {
-    schedule_type   = "manual"
-  }
-}

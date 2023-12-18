@@ -23,19 +23,3 @@ resource "airbyte_destination_postgres" "dest_postgres" {
   name          = "Postgres Faker Destination"
   workspace_id  = var.workspace_id
 }
-
-resource "airbyte_destination_postgres" "dest_postgres_2" {
-  configuration = {
-    database        = "airbyte_2"
-    host            = "172.20.0.11"
-    password        = "postgres"
-    port            = 5432
-    schema          = "public"
-    username        = "postgres"
-    ssl_mode = {
-      disable = {}
-    }
-  }
-  name          = "Postgres Faker Destination 2"
-  workspace_id  = var.workspace_id
-}
