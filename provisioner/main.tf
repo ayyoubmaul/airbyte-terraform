@@ -16,4 +16,5 @@ provider "airbyte" {
 
 module "connections" {
     source = "./connections"
+    workspace_id = var.workspace_id
 }

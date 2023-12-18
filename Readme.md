@@ -14,7 +14,7 @@ cd airbyte
 ```
 export TF_VAR_username=airbyte
 export TF_VAR_password=password
-export TF_VAR_workspace_id="2c7836b6-ea28-4052-bb2b-c36d58935064"
+export TF_VAR_workspace_id=2c7836b6-ea28-4052-bb2b-c36d58935064
 ```
 5. Create sources, destinations, and connections in Airbyte using Terraform
 ```
