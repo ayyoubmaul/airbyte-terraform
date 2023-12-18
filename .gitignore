@@ -1,4 +1,5 @@
 airbyte/
 apps/
+# Terraform
 .terraform*
 terraform.tfstate*
