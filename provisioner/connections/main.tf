@@ -7,20 +7,20 @@ terraform {
   }
 }
 
-module "src_faker" {
+module "sources" {
   source            = "../sources"
   workspace_id = var.workspace_id
 }
 
-module "dest_postgres" {
+module "destinations" {
   source            = "../destinations"
   workspace_id = var.workspace_id
 }
 
 resource "airbyte_connection" "faker_to_postgres" {
   name = "Faker to Postgres"
-  source_id = module.src_faker.src_faker_source_id
-  destination_id = module.dest_postgres.dest_postgres_destination_id
+  source_id = module.sources.src_faker_source_id
+  destination_id = module.destinations.dest_postgres_destination_id
   schedule = {
     schedule_type   = "manual"
   }
